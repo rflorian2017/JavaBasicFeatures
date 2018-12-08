@@ -1,6 +1,12 @@
 package com.company;
 
 public class JavaBasic3 {
+    
+    //my first function
+    printMultiDimensionArray (int[][] myInputArray){
+
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello !");
 
@@ -159,7 +165,109 @@ public class JavaBasic3 {
             }
         }
 
-        
+        //print the temperature of each day, with the day name using switch
+        System.out.println("Temperature history:");
+        for (int i = 0; i < 7; i++) {
+            switch (i) {
+                case 0:
+                    System.out.println("Monday temp: " +weekTemps[i]);
+                    break;
+                case 1:
+                    System.out.println("Tuesday temp: " +weekTemps[i]);
+                    break;
+                case 2:
+                    System.out.println("Wednesday temp: " +weekTemps[i]);
+                    break;
+                case 3:
+                    System.out.println("Thursday temp: " +weekTemps[i]);
+                    break;
+                case 4:
+                    System.out.println("Friday temp: " +weekTemps[i]);
+                    break;
+                case 5:
+                    System.out.println("Saturday temp: " +weekTemps[i]);
+                    break;
+                case 6:
+                    System.out.println("Sunday temp: " +weekTemps[i]);
+                    break;
+                case 7:
+                case 8:
+                    //fallthrough
+                    System.out.println("This is not a day!!!");
+                    /*
+                    ...
+                     */
+                default:
+                    //if you have a value that is not "valid" - a value that does not make sense
+                    System.out.println("This is not a day!!!");
 
+            }
+        }
+
+        //print the temperature of each day, with the day name using switch fallthough
+        System.out.println("Temperature history:");
+        for (int i = 0; i < 7; i++) {
+            switch (i) {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    System.out.println("Weekday " + (i+1) + " temp: " + weekTemps[i]);
+                    break;
+                default:
+                    System.out.println("Never reached");
+        }
+        }
+
+        //Strings and wrapper objects
+        String myFirstString ;
+        Integer myIntegerWrapper;
+
+        myFirstString = "Java is cool!";
+        myFirstString = myFirstString + myFirstString;
+
+
+        System.out.println(myFirstString);
+
+        //give a value of an int
+        myIntegerWrapper = 2;
+        System.out.println(myIntegerWrapper);
+
+        // give the value of a String!!! Parse it using the wrapper
+        myIntegerWrapper = Integer.parseInt("3");
+        System.out.println(myIntegerWrapper);
+
+        // give the value of a String!!! Parse it using the wrapper
+        //this next line will give an exception
+        //myIntegerWrapper = Integer.parseInt("a");
+        //System.out.println(myIntegerWrapper);
+
+        //declare a multidimension array
+        int[][] multiDimensionArray;
+
+        //initialize a multidimension array
+        multiDimensionArray = new int[3][4];
+        int auxiliary = 1;
+        // fill with values
+        for (int a = 0; a < 3; a++) {
+            for (int b = 0; b < 4; b++) {
+                multiDimensionArray[a][b] = auxiliary;
+                auxiliary ++;
+            }
+        }
+
+        for (int a = 0; a < multiDimensionArray.length; a++) {
+
+            //start of block 1
+            for (int b = 0; b < multiDimensionArray[0].length; b++) {
+                System.out.print(multiDimensionArray[a][b] + " ");
+            } //end of block 1
+
+            // start of block 2
+            System.out.println(); //end of block 2
+        }
     }
 }
