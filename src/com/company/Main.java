@@ -2,7 +2,7 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
 
         // prints some messages to the console
         System.out.println("Hello, world!"); // when a set of characters, use quotes
@@ -282,6 +282,8 @@ public class Main {
         System.out.println("Initial int " + anIntData);
         System.out.println("New Int " + combineShorts) ;
 
+        boolean isEven = ((10 % 2 ) == 0);
+        boolean isOdd = ((11 % 2 ) != 0);
 
 
     }
