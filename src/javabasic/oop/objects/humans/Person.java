@@ -4,10 +4,17 @@ public class Person {
     private int age;
     private boolean isFemale;
     private String name;
+    public static int numberOfInstances = 0;
 
     //constructor of a Person object
     public Person() {
         this.age = 0;
+        numberOfInstances++;
+    }
+
+    public Person(boolean isFemale) {
+        this.isFemale = isFemale;
+        numberOfInstances++;
     }
 
     // a new constructor with all the fields as parameters
@@ -15,6 +22,7 @@ public class Person {
         this.age = age;
         this.isFemale = isFemale;
         this.name = name;
+        numberOfInstances++;
     }
 
     //give a name to a person object
@@ -48,6 +56,10 @@ public class Person {
 
     public void setFemale(boolean female) {
         isFemale = female;
+    }
+
+    public int getNumberOfInstances() {
+        return numberOfInstances;
     }
 
     @Override

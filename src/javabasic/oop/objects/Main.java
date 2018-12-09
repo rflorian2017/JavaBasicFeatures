@@ -1,9 +1,11 @@
 package javabasic.oop.objects;
 
+import javabasic.oop.objects.humans.Female;
+import javabasic.oop.objects.humans.Male;
 import javabasic.oop.objects.humans.Person;
 
 public class Main {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Person aPerson = new Person();
 
         //if we print the name before giving the property name a value, it will return nothing => null
@@ -20,7 +22,7 @@ public class Main {
         //age before growing
         System.out.println("age before growing: " + aPerson.getAge());
 
-        aPerson.setAge(aPerson.getAge()+1);
+        aPerson.setAge(aPerson.getAge() + 1);
 
         //age after growing
         System.out.println("age after growing: " + aPerson.getAge());
@@ -44,6 +46,15 @@ public class Main {
         System.out.println(aPerson.toString());
         System.out.println(aNewPerson);
 
+        Male vasile = new Male();
+        //Female cristina = new Female();
+        Person cristina = new Female();
+        cristina.giveName("Cristina");
+
+        System.out.println("We have created a number of Person objects: "
+                + Person.numberOfInstances);
+        System.out.println("We have created a number of Person objects:"
+        + cristina.getNumberOfInstances());
 
     }
 }
