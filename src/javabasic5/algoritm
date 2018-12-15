@@ -1,0 +1,33 @@
+inputString : Santa Claus is coming to town!
+
+Sa se scrie un algoritm care afiseaza de cate ori
+apare fiecare litera si cate litere diferite sunt.
+
+1) structura care ne salveaza sirul de intrare
+2) - ce litere avem -> stucture numita differentLetters
+3) - de cate ori apare fiecare -> differentLetterOcurrence
+
+parcurg sirul:
+
+caz particular:
+iau prima litera S:
+o salvez in differentLetters
+salvez ca apare o data in differentLetterOcurrence
+iau a doua litera a :
+o salvez in differentLetters
+salvez ca apare o data in differentLetterOcurrence
+iau a 5-a litera a:
+vad ca e deja salvata in differentLetters
+adaug la differentLetterOcurrence corespunzator lui a un 1 => litera a apare de doua ori
+
+generalizam:
+parcurg sirul inputString
+daca differentLetters contine litera de pe pozitia curenta
+	adaug la differentLetterOcurrence corespunzator literei un 1
+daca nu
+	adaug la differentLetters litera de pe pozitia curenta
+	adaug la differentLetterOcurrence un 1
+
+BONUS :
+sa se numere si caracterele care nu sunt litere
+
