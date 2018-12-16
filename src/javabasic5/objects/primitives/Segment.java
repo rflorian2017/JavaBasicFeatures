@@ -1,4 +1,4 @@
-package javabasic5.objects;
+package javabasic5.objects.primitives;
 
 public class Segment {
     private Punct p1;
