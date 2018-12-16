@@ -14,12 +14,31 @@ public class Garage {
         vehicles.add(vehicle);
     }
 
+    public void removeVehicle(Vehicle vehicle) {
+        vehicles.remove(vehicle);
+    }
+
 
     public String displayGarageContents() {
         String content = "";
 
         for (Vehicle vehicle: vehicles) {
-            content += vehicle.displayVehicleInfo();
+            content += vehicle;
+            // this line above is the same as the line below
+            //content += vehicle.toString();
+        }
+
+        return content;
+    }
+
+    @Override
+    public String toString() {
+        String content = "";
+
+        for (Vehicle vehicle: vehicles) {
+            content += vehicle;
+            // this line above is the same as the line below
+            //content += vehicle.toString();
         }
 
         return content;

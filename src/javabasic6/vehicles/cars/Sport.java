@@ -13,4 +13,20 @@ public class Sport extends Car {
         return hasSportMode;
     }
 
+    @Override
+    public String displayVehicleInfo() {
+        return "I am a " +
+                this.getCarMaker()
+                + " sport car and sport mode is : " +
+                ( this.hasSportMode() ? "activated!\n" : "deactivated!\n" );
+    }
+
+    @Override
+    public String toString() {
+        return "I am a " +
+                this.getCarMaker()
+                + " sport car and sport mode is : " +
+                ( this.hasSportMode() ? "activated!\n" : "deactivated!\n" );
+    }
+
 }

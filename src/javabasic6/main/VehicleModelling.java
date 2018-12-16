@@ -1,8 +1,7 @@
 package javabasic6.main;
 
 import javabasic6.Garage;
-import javabasic6.vehicles.cars.Car;
-import javabasic6.vehicles.Motorcycle;
+import javabasic6.vehicles.bikes.Motorcycle;
 import javabasic6.vehicles.Tank;
 import javabasic6.vehicles.Vehicle;
 import javabasic6.vehicles.cars.Passenger;
@@ -22,6 +21,11 @@ public class VehicleModelling {
                 "Masseratti", true));
 
         System.out.println(garage.displayGarageContents());
+        //garage.removeVehicle(motorcycle);
+
+        System.out.println(garage);
+
+       // System.out.println(garage.displayGarageContents());
 
 
         //anonymous object
