@@ -1,6 +1,7 @@
 package javabasic6;
 
 import javabasic6.vehicles.Vehicle;
+import javabasic6.vehicles.motorizedvehicles.MotorizedVehicle;
 import java.util.ArrayList;
 
 public class Garage {

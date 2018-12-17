@@ -1,8 +1,8 @@
 package javabasic6.vehicles.bikes;
 
-import javabasic6.vehicles.Vehicle;
+import javabasic6.vehicles.motorizedvehicles.MotorizedVehicle;
 
-public class Motorcycle extends Vehicle {
+public class Motorcycle extends MotorizedVehicle {
     public Motorcycle(int numarRoti, int numarLocuri, int capacitateCilindrica) {
         super(numarRoti, numarLocuri, capacitateCilindrica);
     }

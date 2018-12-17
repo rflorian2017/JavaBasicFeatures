@@ -1,8 +1,8 @@
-package javabasic6.vehicles.cars;
+package javabasic6.vehicles.motorizedvehicles.cars;
 
-import javabasic6.vehicles.Vehicle;
+import javabasic6.vehicles.motorizedvehicles.MotorizedVehicle;
 
-public abstract class Car extends Vehicle {
+public abstract class Car extends MotorizedVehicle {
     private String carMaker;
 
     public Car(int numarRoti, int numarLocuri, int capacitateCilindrica, String carMaker) {
@@ -12,5 +12,9 @@ public abstract class Car extends Vehicle {
 
     public String getCarMaker() {
         return carMaker;
+    }
+
+    public void setCarMaker(String carMaker) {
+        this.carMaker = carMaker;
     }
 }

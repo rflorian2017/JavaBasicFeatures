@@ -1,6 +1,8 @@
 package javabasic6.vehicles;
 
-public class Tank extends Vehicle {
+import javabasic6.vehicles.motorizedvehicles.MotorizedVehicle;
+
+public class Tank extends MotorizedVehicle {
     private int shootingRange;
 
     public Tank(int numarRoti, int numarLocuri, int capacitateCilindrica) {

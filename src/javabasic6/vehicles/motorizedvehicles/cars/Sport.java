@@ -1,4 +1,4 @@
-package javabasic6.vehicles.cars;
+package javabasic6.vehicles.motorizedvehicles.cars;
 
 public class Sport extends Car {
     private boolean hasSportMode;

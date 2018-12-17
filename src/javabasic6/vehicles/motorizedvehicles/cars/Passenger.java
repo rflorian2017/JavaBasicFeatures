@@ -1,6 +1,8 @@
-package javabasic6.vehicles.cars;
+package javabasic6.vehicles.motorizedvehicles.cars;
 
-public class Passenger extends Car {
+import javabasic6.vehicles.ElectricalMotorized;
+
+public class Passenger extends Car implements ElectricalMotorized {
     public Passenger(int numarRoti, int numarLocuri, int capacitateCilindrica, String carMaker) {
         super(numarRoti, numarLocuri, capacitateCilindrica, carMaker);
     }
@@ -17,5 +19,12 @@ public class Passenger extends Car {
         return "I am a " +
                 this.getCarMaker()
                 + " passenger car!\n";
+    }
+
+    @Override
+    public void convertToElectrical(int chargeTime) {
+        this.setCarMaker(this.getCarMaker()
+                + " electrical with charging time: "
+                + chargeTime + " hours");
     }
 }
