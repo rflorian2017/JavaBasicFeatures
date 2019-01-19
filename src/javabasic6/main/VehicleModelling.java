@@ -11,8 +11,12 @@ import javabasic6.vehicles.motorizedvehicles.MotorizedVehicle;
 import javabasic6.vehicles.motorizedvehicles.cars.Passenger;
 import javabasic6.vehicles.motorizedvehicles.cars.Sport;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class VehicleModelling {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Vehicle car = new Passenger(4, 5, 2000,
                 "Skoda");
         MotorizedVehicle tank = new Tank(10, 5, 6000);
@@ -48,6 +52,14 @@ public class VehicleModelling {
         new Garage().addVehicle(
                 new Motorcycle(2, 2, 900));
 
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s = "";
+        while (!(s.equals("quit"))) {
+            System.out.print("Enter String:");
+            s = br.readLine();
+            System.out.println(s);
+        }
 
     }
 }
